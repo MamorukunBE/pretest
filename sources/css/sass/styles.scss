@@ -1,4 +1,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import 'utilities/variables';
+@import 'utilities/functions';
+@import 'utilities/mixins';
+
 @import 'base/global';
 @import 'base/typography';
 
@@ -19,10 +23,6 @@
 
 @import 'themes/theme';
 @import 'themes/admin';
-
-@import 'utilities/variables';
-@import 'utilities/functions';
-@import 'utilities/mixins';
 
 @import 'vendors/bootstrap';
 @import 'vendors/jquery';

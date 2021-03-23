@@ -1,0 +1,3 @@
+@mixin baseTransition($timer) {
+  transition: all $timer ease-in-out;
+}
