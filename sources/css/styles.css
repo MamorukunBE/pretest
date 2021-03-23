@@ -1,0 +1,108 @@
+/* * (all) OU X (balise X) OU [X(="Y")] (tout ayant un attribut X (de valeur Y)) OU .X (class X) OU #X (ID X, unique) */
+/* X.Y (les balises X de classe Y) */
+/* X,Y (toutes les balises Y et les balises X) */
+/* X+Y (tous les Y adjacents à X) */
+/* X~Y (tous les Y frères/soeurs de à X) */
+/* X>Y (tous les enfants Y de premier niveau de X) */
+/* X<space>Y (toutes les balises Y sous les balises X) */
+/* X:first-line (first line of X), X:first-letter */
+/* X:first-child (X which is first first child of something), X:first-child */
+/* X:nth-child(#) (#, odd, even, #n+#), X:nth-of-type(#) */
+/* X:first-of-type, X:last-of-type, X:only-of-type */
+/* :empty, :not (x) (x étant une classe, un ID, ...) */
+/* ::before { content: 'html_code'; }, ::after */
+
+/*
+--- Flex ---
+
+		Sur le parent :
+display: flex;
+flex-direction: row (default), row-reverse;
+flex-direction: column, column-reverse;
+flex-wrap: nowrap (default), wrap;
+flex-wrap: wrap, wrap-reverse;		// Wrap vers le haut
+flex-flow: column wrap;		// flex-direction + flex-wrap
+justify-content: flex-start (default), flex-end, center, space-between (justify), space-around, space-evenly (comme space-around, mais avec un simple espace entre les enfants);
+align-items: stretch (default), flex-start, flex-end, center;		// Position les choses sur l'axe secondaire
+align-content: stretch (default), flex-start, flex-end, center, space-between, space-around, space-evenly;		// Utile avec au moins deux lignes d'éléments
+
+		Sur les enfants :
+order: #;
+align-self: stretch (default), flex-start, flex-end, center;
+*/
+
+/*
+  ____ _       _           _ 
+ / ___| | ___ | |__   __ _| |
+| |  _| |/ _ \| '_ \ / _` | |
+| |_| | | (_) | |_) | (_| | |
+ \____|_|\___/|_.__/ \__,_|_|
+ */
+
+html, body {
+	box-sizing: border-box;
+	height: 100%;
+}
+/* Tablets responsive */
+@media screen and (min-width: 512px) {
+}
+/* Tablets responsive */
+@media screen and (min-width: 1024px) {
+}
+
+/* How to justify inline blocks v-centered */
+/* outer-container {
+	text-align: justify;
+   font-size: 0;
+}
+outer-container>* {
+	display: inline-block;
+	vertical-align: middle;
+}
+outer-container>* * {
+   font-size: 1rem;
+}
+outer-container::after {
+	display: inline-block;
+   content: '';
+   width: 100%;
+} */
+
+/*
+ _                    _ 
+| |    ___   ___ __ _| |
+| |   / _ \ / __/ _` | |
+| |__| (_) | (_| (_| | |
+|_____\___/ \___\__,_|_|
+ */
+
+ /*:root {
+	--varname: vardata;
+	use: "xxx: var(--varname);"
+} */
+
+/*
+ _   _                _           
+| | | | ___  __ _  __| | ___ _ __ 
+| |_| |/ _ \/ _` |/ _` |/ _ \ '__|
+|  _  |  __/ (_| | (_| |  __/ |   
+|_| |_|\___|\__,_|\__,_|\___|_|   
+*/
+
+/*
+ ____            _       
+| __ )  ___   __| |_   _ 
+|  _ \ / _ \ / _` | | | |
+| |_) | (_) | (_| | |_| |
+|____/ \___/ \__,_|\__, |
+						 |___/ 
+*/
+
+/*
+  __             _            
+ / _| ___   ___ | |_ ___ _ __ 
+| |_ / _ \ / _ \| __/ _ \ '__|
+|  _| (_) | (_) | ||  __/ |   
+|_|  \___/ \___/ \__\___|_|   
+*/
+
