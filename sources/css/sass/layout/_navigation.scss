@@ -8,13 +8,13 @@
 	padding-left: 20%;
    padding-right: 20%;
 	border-bottom: 1px solid rgba(255,255,255,0.3);
-	transition: all .3s ease-in-out;
+	transition: height .3s ease-in-out;
 	a {
 		font-family: "Oswald";
 		text-transform: uppercase;
 		color: white;
 		margin-left: 30px;
-		transition: all .3s ease-in-out;
+		@include baseTransition(.3s);
 	}
 	.logo {
 		opacity: 1;
@@ -26,6 +26,49 @@
 			font-size: 18px;
 			opacity: .5;
 			&:hover { opacity: 1; }
+		}
+		@media screen and (max-width: 1200px) {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			top: 0;
+			right: -250px;
+			width: 250px;
+			height: 100vh;
+			background-color: white;
+			padding-top: 70px;
+			transition: transform .3s ease-in-out;
+			a {
+				font-family: "Roboto";
+				color: black;
+				font-weight: 400;
+				text-transform: none;
+				opacity: 1;
+				margin-bottom: 30px;
+			}
+			&.displayed { transform: translatex(-100%); }
+		}
+	}
+	#bgmenu {
+		display: none;
+		position: absolute;
+		right: 35px;
+		cursor: pointer;
+		div {
+			height: 3px;
+			width: 25px;
+			background: white;
+			border-radius: 25px;
+			@include baseTransition(.3s);
+		}
+		@media screen and (max-width: 1200px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			width: 40px;
+			height: 25px;
+			&.scrolled div { background: gray; }
+			&.displayed div { background: #37cfa2; }
 		}
 	}
 	#gotop {
@@ -43,6 +86,6 @@
 		height: 65px;
 		background-color: white;
 		box-shadow: 4px 0 20px -5px rgba(0, 0, 0, .2);
-		a:not(#gotop) { color: black;	}		
+		a:not(#gotop) { color: black; opacity: 1;	}		
 	}
 }

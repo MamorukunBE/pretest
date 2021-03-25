@@ -1,6 +1,9 @@
-var mainnav;
+var mainnav, mainmenu;
 window.addEventListener('load', function() {
 	mainnav = document.getElementById('mainnav');
+	mainmenu = document.getElementById('menu');
+	bgmenu = document.getElementById('bgmenu');
+	//-----
 	const swiper = new Swiper('.swiper-container', {
 		direction: 'horizontal',
 		loop: true,
@@ -8,6 +11,13 @@ window.addEventListener('load', function() {
 		autoplay: { delay: 5000 },
 	});
 	document.addEventListener('scroll', function() {
-		mainnav.classList.toggle('active', window.pageYOffset > 0);
-	})
+		let scrolling = (window.pageYOffset > 0);
+		mainnav.classList.toggle('active', scrolling);
+		bgmenu.classList.toggle('scrolled', scrolling);
+		
+	});
+	document.getElementById('bgmenu').addEventListener('click', function() {
+		mainmenu.classList.toggle('displayed');
+		bgmenu.classList.toggle('displayed');
+	});
 })
