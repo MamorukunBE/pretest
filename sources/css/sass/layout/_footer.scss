@@ -4,7 +4,7 @@ footer {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		padding: 100px 0;
+		padding: 100px 20px;
 		color: grey;
 		line-height: 30px;
 		@media screen and (max-width: 684px) { justify-content: center; }

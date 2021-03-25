@@ -3,14 +3,30 @@ window.addEventListener('load', function() {
 	mainnav = document.getElementById('mainnav');
 	mainmenu = document.getElementById('menu');
 	bgmenu = document.getElementById('bgmenu');
-	//-----
+
+	// Header swiper
+	//--------------
 	let swiperOptions = { direction: 'horizontal' };
 	if (document.body.id == "home") {
 		swiperOptions.loop = true;
 		swiperOptions.pagination = { el: '.swiper-pagination' };
 		swiperOptions.autoplay = { delay: 5000 };
 	}
-	const swiper = new Swiper('.swiper-container', swiperOptions);
+	new Swiper('.swiper-container', swiperOptions);
+
+	// Other swipers
+	//--------------
+	if (document.body.id == "property") {
+		new Swiper('#subswiper', {
+			direction: 'horizontal',
+			loop: true,
+			pagination: { el: '.swiper-pagination' },
+			autoplay: { delay: 5000 }
+		});
+	}
+
+	// Events
+	//-------
 	document.addEventListener('scroll', function() { CheckScroll(); });
 	document.getElementById('bgmenu').addEventListener('click', function() {
 		mainmenu.classList.toggle('displayed');

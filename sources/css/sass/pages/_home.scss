@@ -12,7 +12,8 @@
 			justify-content: space-around;
 			.house {
 				position: relative;
-				width: 300px;
+				max-width: 300px;
+				width: 100%;
 				margin-bottom: 50px;
 				.photo {
 					width: 100%;
@@ -49,7 +50,7 @@
 					left: 0;
 					@include baseTransition(.3s);
 				}
-				&:hover>*:not(.photo) {
+				&:hover>*:not(a) {
 					color: white;
 					left: 50px;
 				}
@@ -68,7 +69,8 @@
 			margin-bottom: 100px;
 			&>*:not(.agent) { width: 100%; }
 			.agent {
-				width: 350px;
+				max-width: 350px;
+				width: 100%;
 				background-color: #37cfa2;
 				margin-bottom: 20px;
 				>*:not(.photowrapper) { padding-left: 15px; }
@@ -105,7 +107,8 @@
 			}
 			.workdata {
 				position: relative;
-				width: 250px;
+				max-width: 250px;
+				width: 100%;
 				text-align: center;
 				i { font-size: 42px; }
 			}
@@ -126,7 +129,8 @@
 			margin-bottom: 50px;
 			&>h2 { text-align: center; }
 			.news {
-				width: 350px;
+				max-width: 350px;
+				width: 100%;
 				margin-bottom: 50px;
 				.photo {
 					width: 100%;
