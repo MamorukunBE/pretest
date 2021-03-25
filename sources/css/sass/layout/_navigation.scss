@@ -1,10 +1,11 @@
 #mainnav {
+	display: flex;
+	// justify-content: flex-end;
+	align-items: center;
 	position: fixed;
 	z-index: 10;
-	display: flex;
 	width: 100vw;
 	height: 80px;
-	align-items: center;
 	padding-left: 20%;
    padding-right: 20%;
 	border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -13,7 +14,6 @@
 		font-family: "Oswald";
 		text-transform: uppercase;
 		color: white;
-		margin-left: 30px;
 		@include baseTransition(.3s);
 	}
 	.logo {
@@ -24,6 +24,7 @@
 		margin-left: auto;
 		a {
 			font-size: 18px;
+			margin-left: 30px;
 			opacity: .5;
 			&:hover { opacity: 1; }
 		}
@@ -71,21 +72,23 @@
 			&.displayed div { background: #37cfa2; }
 		}
 	}
-	#gotop {
-		position: fixed;
-		bottom: 25px;
-		right: 25px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: #37cfa2;
-		width: 50px;
-		height: 50px;
-	}
 	&.active {
 		height: 65px;
 		background-color: white;
 		box-shadow: 4px 0 20px -5px rgba(0, 0, 0, .2);
 		a:not(#gotop) { color: black; opacity: 1;	}		
 	}
+}
+#gotop {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #37cfa2;
+	color: white;
+	width: 50px;
+	height: 50px;
+	z-index: 10;
 }

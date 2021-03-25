@@ -1,0 +1,38 @@
+footer {
+	background-color: #333333;
+	.wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 100px 0;
+		color: grey;
+		line-height: 30px;
+		@media screen and (max-width: 684px) { justify-content: center; }
+		h3 { color: white; }
+		a {
+			color: #cbcbcb;
+			&:hover { color: white !important; }
+		}
+		#aboutus, #followus {
+			margin: 0 calc((50% - 300px) / 2);
+			@media screen and (max-width: 684px) { margin: 0; }
+		}
+		#aboutus { width: 300px; }
+		#followus {
+			width: 266px;
+			a {
+				color: grey;
+				padding-right: 50px;
+			}
+		}
+		#copyright {
+			width: 100%;
+			text-align: center;
+			margin-top: 110px;
+			hr {
+				border-color: lightgray;
+				width: 85%;
+			}
+		}
+	}
+}
